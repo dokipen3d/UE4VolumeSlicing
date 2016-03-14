@@ -31,5 +31,10 @@ The second part of the Material takes the 3d colour uvw and does some modulo mat
 Because the sampling of the texture is done in 2D space and the input is 3D the sampling can jump accross the 2D tiles if mipmapping is turned on. To combat this at this stage, Mipmapping is turned off.
 The plan for the future is implement the sampling using gather4/textureGather to get the samples and do interpolation manually.
 
+## Current bugs
+This does not do 2 pass shadows like the nvidia book method but piggy backs off of UE4's fourier opactiy maps for translucent shaders. The bug is that when the actor or the llight rotates, the shadows rotate in a wierd way. Currently it seems like the issues could either be a) dodgy tangents on the vertices b) odd bounds on the geometry or c) something I am unaware of. See here for more info on the bug.....
+
+https://answers.unrealengine.com/questions/217866/volumetric-shadows-wrong-when-rotating-actor.html
+
 ## License
 I've put this under MIT. Lemme know if that is an issue for anyone.
