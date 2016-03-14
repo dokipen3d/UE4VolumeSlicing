@@ -32,4 +32,4 @@ Because the sampling of the texture is done in 2D space and the input is 3D the 
 The plan for the future is implement the sampling using gather4/textureGather to get the samples and do interpolation manually.
 
 ## License
-LGPL v3
+I've put this under MIT. Lemme know if that is an issue for anyone.
